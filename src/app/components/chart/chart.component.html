@@ -1,0 +1,6 @@
+<p *ngIf="cityWeather.length > 0 && !error">
+    <ngx-charts-bar-vertical [view]="[1000,400]" [results]="this.cityWeather" [xAxisLabel]="'Date/Time'"
+        [legendTitle]="'Product Sale Chart'" [yAxisLabel]="'Temperature (C)'" [showXAxisLabel]="true"
+        [showYAxisLabel]="true" [xAxis]="true" [yAxis]="true" [gradient]="true">
+    </ngx-charts-bar-vertical>
+</p>

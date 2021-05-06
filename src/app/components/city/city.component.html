@@ -1,0 +1,10 @@
+<form class="form-inline" [formGroup]="form" (ngSubmit)="findCity()">
+    <div class="form-group mx-sm-3 mb-2">
+        <label for="city" class="sr-only">City</label>
+        <input type="text" class="form-control" id="city" placeholder="City" formControlName="city">
+    </div>
+    <button type="submit" [disabled]="form.invalid" class="btn btn-primary mb-2">Search</button>
+</form>
+<div  class="alert alert-warning ml-3" role="alert" *ngIf="errors!=''">
+    {{errors}}
+</div>
